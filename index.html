@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XLS/XLSX/CSV To Json</title>
+	<script type="text/javascript" src="vendor/jquery.min.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function() {			
+		 	$('#sub').click(function(){
+		 		// exXlsOrCsvToJson(fileId, function/object, objectFunction);
+		 		// exXlsOrCsvToJson(fileId, function);
+		 		exXlsOrCsvToJson('#file', 'my', 'test');		 		
+		 	});		 	
+		});
+		var my = [];
+		my['test'] = function(data){			
+			$('#output').html('Also check the console log.<br>'+data);
+			console.log(data);
+		};					
+	</script>
+
+	<script src="js/papaparse.min.js"></script>
+	<!-- <script src="js/shim.js"></script> -->
+    <!-- <script src="js/cpexcel.js"></script> -->
+    <script src="js/xls.js"></script>
+    <script src="js/jszip.js"></script>
+    <script src="js/xlsx.js"></script>
+    <script src="js/dropsheet.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="vendor/spin.js"></script> -->
+    <script src="exXslOrCsvToJson.js"></script>
+</head>
+<body>
+<input type="file" id="file">
+<input type="button" id="sub" value="Click to view">
+<div id="output"></div>
+</body>
+</html>
