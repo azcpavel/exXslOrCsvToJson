@@ -7,8 +7,8 @@ Simple jQuery CSV/XLS/XLSX to JSON
 	
 	$(document).ready(function() {			
 	 	$('#sub').click(function(){
-	 		// exXlsOrCsvToJson(fileId, function/object, function);
-	 		// exXlsOrCsvToJson(fileId, function);
+	 		// exXlsOrCsvToJson(fileId, function/object, objectFunction);
+		 	// exXlsOrCsvToJson(fileId, function);
 	 		exXlsOrCsvToJson('#file', 'my', 'test');		 		
 	 	});		 	
 	});
